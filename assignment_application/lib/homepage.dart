@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'incompetencecalculator.dart';
+import 'incompetencealarmclock.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -26,6 +28,26 @@ class HomePage extends StatelessWidget {
                 Navigator.pop(context);
               },
               child: Text('戻る'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => IncompetenceCalculator()),
+                );
+              },
+              child: Text('電卓へ進む'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => IncompetenceAlarmClock()),
+                );
+              },
+              child: Text('目覚ましへ進む'),
             ),
           ],
         ),
