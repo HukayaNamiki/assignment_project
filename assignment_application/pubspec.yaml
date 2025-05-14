@@ -31,6 +31,13 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^2.27.0
+  cloud_firestore: ^4.15.0
+
   # ↓ 画像などを使いたい場合、assetsセクションを有効化
   # assets:
   #   - assets/images/
