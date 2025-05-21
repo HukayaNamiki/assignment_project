@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/calculator_screen.dart';
 
 void main() {
-  runApp(NoteApp());
+  runApp(WackyCalculatorApp());
 }
 
-class NoteApp extends StatelessWidget {
+class WackyCalculatorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '授業ノートアプリ',
+      title: 'Wacky Calculator',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: CalculatorScreen(),
     );
   }
 }
