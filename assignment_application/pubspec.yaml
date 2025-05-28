@@ -1,5 +1,5 @@
 name: assignment_application
-description: "A new Flutter project."
+description: "A unique calculator app that produces chaotic results."
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -10,37 +10,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.8
-
-  # ↓ 以下、授業ノート管理アプリに必要なパッケージを追加
-  sqflite: ^2.3.2           # SQLiteデータベースの操作に使用
-  path_provider: ^2.1.2     # SQLiteの保存パス取得に必要
-  path: ^1.9.0              # ファイルパス操作用（path_providerとセット）
-  provider: ^6.1.2          # 状態管理パッケージ（MVVMに近い実装が可能）
-
-  # ↓ UIを整えたい場合に使用（必要であればコメントアウト解除）
-  # flutter_slidable: ^3.0.1 # スワイプして削除などのUIに対応
+  provider: ^6.1.2  # 状態管理に使用
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
 
-
-dependencies:
-  flutter:
-    sdk: flutter
-  firebase_core: ^2.27.0
-  cloud_firestore: ^4.15.0
-
-  # ↓ 画像などを使いたい場合、assetsセクションを有効化
-  # assets:
-  #   - assets/images/
 
 
   
