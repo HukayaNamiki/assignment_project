@@ -1,5 +1,6 @@
 import 'dart:math';
 
+
 class WackyCalculator {
   String calculate(String expression) {
   try {
@@ -10,11 +11,12 @@ class WackyCalculator {
     }
 
     // 通常の計算（例: 数式評価用の関数がある場合）
-    double result = _evaluateExpression(expression); // ←これが実際の計算関数
-    return result.toString();
-  } catch (e) {
-    return 'エラー';
-  }
+   double _evaluateExpression(String expression) {
+  Parser p = Parser();
+  Expression exp = p.parse(expression);
+  ContextModel cm = ContextModel();
+  return exp.evaluate(EvaluationType.REAL, cm);
+}
 }
 
   static String _distortExpression(String expression) {
