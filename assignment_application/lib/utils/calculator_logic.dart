@@ -1,17 +1,21 @@
 import 'dart:math';
 
 class WackyCalculator {
-  static String calculate(String expression) {
-    // 正しい答えではなく、わざと変な答えを返す
-    try {
-      // 意図的に表現を一部変更する（例: 数字をランダムに変換）
-      String modifiedExpression = _distortExpression(expression);
-      double fakeResult = _fakeEvaluate(modifiedExpression);
-      return fakeResult.toStringAsFixed(2);
-    } catch (e) {
-      return '??';
+  String calculate(String expression) {
+  try {
+    // 30%の確率で無茶苦茶な結果を返す
+    final rand = Random();
+    if (rand.nextInt(100) < 30) {
+      return _getRandomWeirdResult();
     }
+
+    // 通常の計算（例: 数式評価用の関数がある場合）
+    double result = _evaluateExpression(expression); // ←これが実際の計算関数
+    return result.toString();
+  } catch (e) {
+    return 'エラー';
   }
+}
 
   static String _distortExpression(String expression) {
     // 数字を少しだけ改変する
@@ -26,4 +30,21 @@ class WackyCalculator {
     // 本当のパースはせず、適当な計算結果を返す
     return Random().nextDouble() * 100 - 50; // -50 ～ +50の間のランダムな数
   }
+String _getRandomWeirdResult() {
+  final weirdResults = [
+    '42',
+    '∞',
+    '-999999',
+    '3.14159265358979323846',
+    'NaN（なにこれ）',
+    'あなたの心の中に答えがある',
+    'エラー404: 答えが見つかりません',
+    '1000000年後に判明します',
+    '√-1 = i（虚数！）',
+    'ねこ',
+  ];
+
+  return weirdResults[Random().nextInt(weirdResults.length)];
+}
+
 }
