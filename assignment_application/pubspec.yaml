@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   provider: ^6.1.2  # 状態管理に使用
+  math_expressions: ^2.4.0  # 数式の評価用
 
 dev_dependencies:
   flutter_test:
@@ -20,7 +21,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
-
-
-  
